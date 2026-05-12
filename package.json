@@ -1,0 +1,67 @@
+{
+  "name": "agentflow-research",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Multi-agent research workflow platform with controlled tools, auditability and reproducible evaluations.",
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace @agentflow/web",
+    "dev:worker": "npm run dev --workspace @agentflow/worker",
+    "build": "npm run build --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "eval": "npm run eval --workspace @agentflow/evals",
+    "db:generate": "npm run db:generate --workspace @agentflow/db",
+    "db:migrate": "npm run db:migrate --workspace @agentflow/db"
+  },
+  "dependencies": {
+    "@bull-board/api": "^6.7.10",
+    "@bull-board/express": "^6.7.10",
+    "@neondatabase/serverless": "^1.0.2",
+    "@opentelemetry/api": "^1.9.0",
+    "@opentelemetry/sdk-node": "^0.208.0",
+    "@types/bcryptjs": "^2.4.6",
+    "bcryptjs": "^3.0.2",
+    "bullmq": "^5.61.0",
+    "clsx": "^2.1.1",
+    "date-fns": "^4.1.0",
+    "drizzle-orm": "^0.44.6",
+    "ioredis": "^5.8.1",
+    "lucide-react": "^0.468.0",
+    "nanoid": "^5.1.6",
+    "next": "^15.5.5",
+    "next-auth": "^5.0.0-beta.29",
+    "pg": "^8.16.3",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "server-only": "^0.0.1",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@eslint/js": "^9.36.0",
+    "@testing-library/jest-dom": "^6.8.0",
+    "@testing-library/react": "^16.3.0",
+    "@types/node": "^22.18.6",
+    "@types/pg": "^8.15.5",
+    "@types/react": "^19.1.16",
+    "@types/react-dom": "^19.1.9",
+    "drizzle-kit": "^0.31.5",
+    "eslint": "^9.36.0",
+    "eslint-config-next": "^15.5.5",
+    "jsdom": "^25.0.1",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2",
+    "vitest": "^2.1.9"
+  },
+  "engines": {
+    "node": ">=22.0.0",
+    "npm": ">=10.0.0"
+  }
+}
