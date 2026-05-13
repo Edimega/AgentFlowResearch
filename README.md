@@ -141,6 +141,40 @@ Expected visible behavior:
 
 More workflow examples are in [docs/workflows.md](docs/workflows.md).
 
+## Product Screenshots
+
+The interface is built around a single operational workspace: users create a research objective, monitor agent execution, review evidence, and open the generated Markdown report without leaving the dashboard.
+
+### Workflow Creation
+
+![Workflow creation screen](captura2.png)
+
+The initial dashboard exposes the research form, execution metrics, authorized tools, timeline, and result shortcuts. The system generates a short workflow title automatically from the objective.
+
+### Live Execution Progress
+
+![Live workflow progress modal](captura1.png)
+
+During execution, a full-screen progress overlay keeps the user informed while agents plan, search real web sources, read pages, draft the report, and run quality review.
+
+### Agent Plan And Evidence
+
+![Agent workflow map and evidence metrics](captura4.png)
+
+The workflow map shows the agent handoff sequence, step status, execution metrics, and accepted sources with reliability labels.
+
+### Agent Run Detail
+
+![Agent run detail cards](captura3.png)
+
+Each agent run records its objective, completion state, quality signal, token estimate, and auditable output status.
+
+### Markdown Report
+
+![Generated Markdown report preview](captura5.png)
+
+The final report is rendered as Markdown with evidence-backed sections, source citations, and direct actions to copy or download the `.md` output.
+
 ## Security Model
 
 AgentFlow Research treats external content as untrusted data. Retrieved pages, uploaded documents, tool outputs, and user-provided files cannot override system instructions, developer policies, workspace permissions, or tool allowlists.
